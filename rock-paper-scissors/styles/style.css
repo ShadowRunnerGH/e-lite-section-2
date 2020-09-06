@@ -1,0 +1,146 @@
+h1 {
+  font-family: "Fredoka One";
+  font-weight: 100;
+  margin-left: 40px;
+  text-align: center;
+  font-size: 3rem;
+}
+.restartBtnContainer {
+  margin-top: -10px;
+  margin-bottom: 40px;
+  display: block;
+  text-align: center;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid gainsboro;
+  z-index: 10;
+  background-color: white;
+  width: 30%;
+}
+.modal.active {
+  transform: translate(-50%, -60%) scale(1);
+}
+.modal:hover {
+  border-color: silver;
+}
+.header {
+  padding-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Prompt";
+  display: flex;
+}
+.header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.close {
+  position: relative;
+  border: none;
+  outline: none;
+  background: none;
+  left: 95%;
+  font-size: 1.25rem;
+  color: #ccc;
+  font-weight: bold;
+}
+.close:hover {
+  cursor: pointer;
+  color: #000000;
+}
+#lostModal .modal-body {
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+  font-family: "Josefin Sans";
+  padding-bottom: 20px;
+}
+#wonModal .modal-body {
+  text-align: center;
+  color: green;
+  font-size: 2rem;
+  font-family: "Josefin Sans";
+  padding-bottom: 20px;
+}
+.restartBtn {
+  border: 0.5px solid black;
+  padding: 10px;
+  border-radius: 3px;
+  font-family: "Josefin Sans";
+  font-size: 1rem;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, white 50%, black 50%);
+  color: black;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: background-position 500ms;
+  -moz-transition: background-position 500ms;
+  transition: background-position 500ms;
+}
+.restartBtn:hover {  
+  background-color: black;
+  background-position: 0 -100%;
+  color: white;
+}
+.selections {
+  display: flex;
+  justify-content: center;
+}
+.selections .selection {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding-left: 5%;
+  padding-right: 2%;
+  font-size: 4rem;
+  transition: 200ms;
+}
+.selection:hover {
+  transform: scale(1.2);
+}
+.results {
+  display: grid;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-family: "Google Sans Display";
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.result-score {
+  margin-left: 0.1rem;
+  font-size: 1rem;
+}
+.result-selection {
+  opacity: 0.5;
+}
+.result-selection.winner {
+  opacity: 1;
+  font-size: 3.5rem;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: none;
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  cursor: default;
+  pointer-events: all;
+}

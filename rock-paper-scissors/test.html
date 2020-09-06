@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Helpful KA tutorials</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans|Google+Sans+Display|Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        text-align: center;
+        font-family: "Google Sans Display";
+        font-size: 2.2rem;
+      }
+      h3 {
+        margin-left: 30px;
+        font-family: "Google Sans Display";
+        font-size: 1.3rem;
+      }
+      ul {
+        margin-left: 30px;
+        margin-top: -10px;
+        font-family: "Josefin Sans";
+      }
+      li {
+        line-height: 23px;
+      }
+      a {
+        color: #3977cb;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>KA tutorials</h1>
+    <h3>HTML/CSS/JS</h3>
+    <ul id="webpageTutorials">
+      <!-- Filled using JS -->
+    </ul>
+    <h3>PJS</h3>
+    <ul class="pjsTutorials">
+      <!-- Filled using JS -->
+    </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      var webpageTutorials = [
+        {
+          programId: "5212837118296064",
+          programName: "Graphics in Webpages",
+          name: "Reader Writer Penguin",
+          username: "WriterPenguin1127",
+          kaid: "",
+        },
+        {
+          programId: "6693037677641728",
+          programName: "Khan Academy API",
+          name: "To13",
+          username: "epophoney13",
+          kaid: "",
+        },
+      ];
+      var baseProgramLink =
+        "https://www.khanacademy.org/computer-programming/a/";
+      var baseUsernameLink = "https://www.khanacademy.org/profile/";
+      var htmlTutorials = document.getElementById("webpageTutorials");
+      for (i in webpageTutorials) {
+        //alert(webpageTutorials[i].programId)
+        $.getJSON(
+          "https://www.khanacademy.org/api/internal/user/profile?username=" +
+            webpageTutorials[i].username +
+            "&callback=?",
+          function (data) {
+            webpageTutorials[i].kaid = data.kaid;
+          }
+        );
+        var li = document.createElement("li");
+        li.innerHTML =
+          "<a href='" +
+          baseProgramLink +
+          webpageTutorials[i].programId +
+          "' target='_blank'>" +
+          webpageTutorials[i].programName +
+          "</a> - " +
+          "<a href='" +
+          baseUsernameLink +
+          webpageTutorials[i].kaid +
+          "'>" +
+          webpageTutorials[i].name +
+          "</a>";
+        htmlTutorials.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
