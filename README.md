@@ -1,4 +1,4 @@
-## Exercise 0 - Parav Jaikrishan(9-N)
+## Exercise 0
 - [Solution 1](https://www.codewars.com/kata/reviews/5a3ddaa13efef00f04000167/groups/5f0fe69f2ee7330001584600)
 - [Solution 2](https://www.codewars.com/kata/reviews/591ad33de5e7871cac0009be/groups/5f0fe9ff2ee7330001584640)
 - [Solution 3](https://www.codewars.com/kata/reviews/5ce9c4fc8300dc0001fc4b65/groups/5f0ff2f4332a300001d70fa9)
@@ -11,5 +11,5 @@ Site deployed [here](https://filter-question-form.vercel.app/).
 ## Exercise 2
 Site deployed [here](https://numbers-api-js.vercel.app/).
 
-## Exercise 3 - Parav Jaikrishan(9-N)      
+## Exercise 3      
 Site deployed [here](https://rock-paper-scissors-js.vercel.app/).
