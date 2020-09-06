@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="./styles/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Question Form</title>
+  </head>
+  <body>
+    <h1>Filter Question Form</h1>
+    <form>
+      <div class="group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="John Doe" />
+      </div>
+      <div class="group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john.doe@gmail.com"
+        />
+      </div>
+      <div class="group">
+        <label for="class">Class</label>
+        <select name="class" id="class">
+          <option value selected>Select a class</option>
+          <option value="VI">VI</option>
+          <option value="VII">VII</option>
+          <option value="VIII">VIII</option>
+          <option value="IX">IX</option>
+          <option value="X">X</option>
+          <option value="XI">XI</option>
+          <option value="XII">XII</option>
+        </select>
+      </div>
+      <div class="group">
+        <label for="section">Section</label>
+        <select name="section" id="section" disabled>
+          <option value selected>Select a section</option>
+        </select>
+      </div>
+      <div class="group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
